@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        hmm
+        <form action="book_now" method="post">
+            {% csrf_token %}
+        
+        from <input type="text" name="From">
+        TO <input type="text" name="To">
+        Name <input type="text" name="name">
+        start<input type="date" name="Start_date">
+        end<input type="date" name="end_date">
+        <input type="submit">
+        <a href="index">back</a>
+
+    </form>
+    </body>
+</html>

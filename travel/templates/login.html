@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+    .container{
+        margin-top: 20px;
+        background-color:whitesmoke;
+        padding-left: 400px;
+        
+        
+    }
+    input[type="text"]{
+        height: 20px;
+        border-width: 1px;
+        border-color: rgb(145, 134, 134);
+        font-size: 20px;
+        
+        
+    }
+    
+    input[type="password"]{
+        height: 20px;
+        border-width: 1px;
+        border-color: rgb(145, 134, 134);
+        font-size: 20px;
+        text-align: justify;
+        margin-top: 10px;
+
+    }
+
+    input[type="submit"]{
+        height: 25px;
+        margin-top: 10px;
+        cursor: pointer;
+
+    }
+    input[type="submit"]:{
+        color: rgba(192, 192, 192, 0.418);
+        cursor: pointer;
+    
+    }
+    
+    
+
+    
+</style>
+<body>
+    <div class="container">
+    <form action="login" method="post">
+        {% csrf_token %}
+
+        
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="Submit">
+      
+
+        
+
+        
+    </form>
+</div>
+<a href="register">register</a>
+
+    
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+    
+</body>
+</html>
